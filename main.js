@@ -63,7 +63,7 @@ class Apple {
 }
 
 var canvas = document.getElementById("canvas");
-var snake = new Snake();
+var snake = new Snake(20,20,20);
 var apple = new Apple();
 var canvasContext = canvas.getContext("2d");
 
@@ -81,6 +81,7 @@ function show() {
 }
 
 function update(){
+  canvasContext.clearRect(0,0,canvas.width,canvas.height)
   snake.move()
 }
 
